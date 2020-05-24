@@ -113,7 +113,7 @@ extension ShadowsocksAdapter {
         }
 
         public override func output(data: Data) {
-            var data = encryptAll(data)
+            let data = encryptAll(data)
 
             if sendKey {
                 outputStreamProcessor!.output(data: data)

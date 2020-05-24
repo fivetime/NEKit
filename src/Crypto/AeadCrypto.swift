@@ -53,7 +53,7 @@ open class AeadCrypto {
                 return ciphertext
             }
 
-        case .CHACHA20POLY1305:
+        case .CHACHA20IETFPOLY1305:
             var ciphertextLen: UInt64 = UInt64(data.count + tagSize)
             var ciphertext = [UInt8](repeating: 0, count: Int(ciphertextLen))
 
@@ -93,7 +93,7 @@ open class AeadCrypto {
                 return result
             }
 
-        case .CHACHA20POLY1305:
+        case .CHACHA20IETFPOLY1305:
             var decryptedLen: UInt64 = UInt64(data.count - tagSize)
             var decrypted = [UInt8](repeating: 0, count: Int(decryptedLen))
 

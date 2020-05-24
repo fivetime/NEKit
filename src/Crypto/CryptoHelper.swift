@@ -13,7 +13,7 @@ public struct CryptoHelper {
         .AES128GCM: (16, 16, 12, 16),
         .AES192GCM: (24, 24, 12, 16),
         .AES256GCM: (32, 32, 12, 16),
-        .CHACHA20POLY1305: (32, 32, 12, 16)
+        .CHACHA20IETFPOLY1305: (32, 32, 12, 16)
     ]
 
     public static func getKeyLength(_ methodType: CryptoAlgorithm) -> Int {
